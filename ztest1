@@ -1,0 +1,22 @@
+@EndUserText.label : 'test database table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztest1 {
+
+  key client               : abap.clnt not null;
+  key train_no             : abap.int2 not null;
+  train_name               : abap.string(0);
+  sequence                 : abap.int1;
+  station_code             : abap.string(0);
+  station_name             : abap.string(0);
+  arrival_time             : abap.tims;
+  departure_time           : abap.tims;
+  distance                 : abap.int2;
+  source_station_code      : abap.string(0);
+  source_station_name      : abap.string(0);
+  destination_station_code : abap.string(0);
+  destination_station_name : abap.string(0);
+
+}
