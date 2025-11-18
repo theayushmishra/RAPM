@@ -1,0 +1,4 @@
+@EndUserText.label: 'Train details - serive definition'
+define service Zui_train_details {
+  expose z_c_train_details;
+}

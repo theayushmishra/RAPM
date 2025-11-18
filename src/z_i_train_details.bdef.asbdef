@@ -1,0 +1,34 @@
+managed;
+strict ( 2 );
+//with draft;
+
+define behavior for z_i_train_details alias TrainDetails
+implementation in class zbp_i_train_details unique
+persistent table ztrain_details
+//draft table <draft_table_name>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+// late numbering // early numbering
+{
+  mapping for ztrain_details
+    {
+      TrainNo                = train_no;
+      TrainName              = train_name;
+      sequence               = sequence;
+      StationCode            = station_code;
+      StationName            = station_name;
+      arrivalTime            = arrival_time;
+      departureTime          = departure_time;
+      distance               = distance;
+      SourceStationCode      = source_station_code;
+      SourceStationName      = source_station_name;
+      DestinationStationCode = destination_station_code;
+      DestinationStationName = destination_station_name;
+    }
+  create ( authorization : global );
+  update;
+  delete;
+  //  action upload_csv parameter zcsv_upload_param result [1] $self;
+  field ( readonly ) TrainNo;
+}
