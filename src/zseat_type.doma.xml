@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZSEAT_TYPE</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000010</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Seat type</DDTEXT>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>MS</DOMVALUE_L>
+     <DDTEXT>Middle seat</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>WS</DOMVALUE_L>
+     <DDTEXT>Window seat</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>AS</DOMVALUE_L>
+     <DDTEXT>Aisle seat</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>LB</DOMVALUE_L>
+     <DDTEXT>Lower birth</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>MB</DOMVALUE_L>
+     <DDTEXT>Middle birth</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>UB</DOMVALUE_L>
+     <DDTEXT>Upper birth</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>SL</DOMVALUE_L>
+     <DDTEXT>Side lower</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZSEAT_TYPE</DOMNAME>
+     <VALPOS>0008</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>SU</DOMVALUE_L>
+     <DDTEXT>Side upper</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
