@@ -1,4 +1,0 @@
-@EndUserText.label: 'Train ticket booking - serive definition'
-define service Zui_train_booking {
-  expose z_c_ticket_booking;
-}
