@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_YBOOKING_TRAIN'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_YBOOKING_TRAIN'
+  }
+}
+define service ZUI_YBOOKING_TRAIN_O4 provider contracts odata_v4_ui {
+  expose ZC_YBOOKING_TRAIN as booking;
+}

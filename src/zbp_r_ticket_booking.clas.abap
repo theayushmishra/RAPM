@@ -1,0 +1,5 @@
+CLASS zbp_r_ticket_booking DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF yr_ticket_booking.
+ENDCLASS.
+
+CLASS zbp_r_ticket_booking IMPLEMENTATION.
+ENDCLASS.

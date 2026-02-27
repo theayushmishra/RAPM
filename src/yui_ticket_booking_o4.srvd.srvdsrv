@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for YC_TICKET_BOOKING'
+define service YUI_TICKET_BOOKING_O4
+  provider contracts odata_v4_ui {
+  expose YC_TICKET_BOOKING;
+}

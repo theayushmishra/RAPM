@@ -1,0 +1,58 @@
+managed implementation in class zbp_r_ticket_booking unique;
+strict ( 2 );
+with draft;
+
+
+define behavior for YR_TICKET_BOOKING alias booking
+persistent table ytravel
+lock master total etag LastChanged
+authorization master ( instance )
+etag master LocalLastChanged
+draft table yticket_book_d
+//early numbering
+{
+  create ( precheck );
+  update;
+  delete;
+
+  field ( readonly : update )
+  CustomerId;
+
+  field ( mandatory : create )
+  CustomerId;
+
+  field ( readonly )
+  Pnr,
+  TransactionId,
+  LocalLastChanged,
+  LastChanged,
+  CreatedBy,
+  ChangedBy;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+  determine action trigger_all;
+
+  mapping for ytravel corresponding
+    {
+      CustomerId       = customer_id;
+      TransactionId    = Transaction_Id;
+      TrainNo          = Train_No;
+      SeatClass        = Seat_Class;
+      TravelDate       = Travel_Date;
+      FromStationCode  = From_Station_Code;
+      ToStationCode    = To_Station_Code;
+      BookingStatus    = Booking_Status;
+      coach            = Coach;
+      seatno           = seat_no;
+      seattype         = seAT_TYPE;
+      vikalp           = vikalp;
+      LocalLastChanged = Local_Last_Changed;
+      LastChanged      = last_changed;
+      createdby        = created_by;
+      changedby        = changed_by;
+    }
+}

@@ -1,0 +1,68 @@
+managed implementation in class ZBP_R_YBOOKING_TRAIN unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_YBOOKING_TRAIN alias booking
+persistent table ybooking_train
+extensible
+draft table zyboking_train_d
+etag master LocalLastChanged
+lock master total etag LastChanged
+authorization master ( global )
+late numbering
+{
+  field ( mandatory : create, readonly : update )
+  CustomerId, TrainNo;
+
+  field ( readonly )
+  pnr,
+  customerName,
+  LocalLastChanged,
+  LastChanged,
+  CreatedBy,
+  ChangedBy;
+
+
+  create ( precheck );
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+  determine action trigger_all;
+
+  determination determineName on modify { create; field customerId; }
+
+  //  validation validateBookingStatus on save { create; update; }
+
+  mapping for ybooking_train corresponding extensible
+    {
+      Pnr              = PNR;
+      CustomerID       = CUSTOMER_ID;
+      CustomerName     = CUSTOMER_NAME;
+      TransactionID    = TRANSACTION_ID;
+      TrainNo          = TRAIN_NO;
+      BookingDate      = BOOKING_DATE;
+      BookingTime      = BOOKING_TIME;
+      BookingStatus    = BOOKING_STATUS;
+      Coach            = COACH;
+      SeatClass        = SEAT_CLASS;
+      SeatType         = SEAT_TYPE;
+      SeatNo           = SEAT_NO;
+      Vikalp           = VIKALP;
+      BookedFrom       = BOOKED_FROM;
+      PaymentMode      = PAYMENT_MODE;
+      BaseFare         = BASE_FARE;
+      ConvenienceFee   = CONVENIENCE_FEE;
+      TotalFare        = TOTAL_FARE;
+      FareUnit         = FARE_UNIT;
+      LocalLastChanged = LOCAL_LAST_CHANGED;
+      LastChanged      = LAST_CHANGED;
+      CreatedBy        = CREATED_BY;
+      ChangedBy        = CHANGED_BY;
+    }
+
+}
